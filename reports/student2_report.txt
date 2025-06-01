@@ -1,0 +1,79 @@
+=== ОТЧЕТ ПО ПРОВЕРКЕ СТУДЕНТА: student2 ===
+Начальный балл: 100
+
+Папка с заданиями: /app/student2/HomeAssignments
+
+--- Проверка Assignment3 ---
+Путь: /app/student2/HomeAssignments/Assignment3
+OK: Makefile присутствует
+ПРЕДУПРЕЖДЕНИЕ: Нет переменных компилятора в Makefile (-2 балла)
+OK: make clean выполнен успешно
+OK: Проект собирается
+Найдено файлов исходного кода: 11
+ПРЕДУПРЕЖДЕНИЕ: Базовый класс не найден (-3 балла)
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+ПРЕДУПРЕЖДЕНИЕ: Проблемы со стилем кода (-1 баллов)
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения cppcheck (-2 балла)
+Детали cppcheck:
+Checking Autobots.cpp ...
+1/8 files checked 12% done
+Checking Bbee.cpp ...
+2/8 files checked 23% done
+Checking Deceptikon.cpp ...
+3/8 files checked 36% done
+Checking Gun.cpp ...
+4/8 files checked 41% done
+Checking Hp.cpp ...
+5/8 files checked 46% done
+Checking Transformer.cpp ...
+6/8 files checked 70% done
+Checking main.cpp ...
+7/8 files checked 74% done
+Checking tests.cpp ...
+8/8 files checked 100% done
+Hp.hpp:9:9: style: Class 'Hp' has a constructor with 1 argument that is not explicit. [noExp
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Найдены исполняемые файлы: ['mikmik', 'testik']
+OK: Утечки памяти не обнаружены в mikmik
+OK: Утечки памяти не обнаружены в testik
+
+--- Проверка Assignment4 ---
+Путь: /app/student2/HomeAssignments/Assignment4
+OK: Makefile присутствует
+ПРЕДУПРЕЖДЕНИЕ: Нет переменных компилятора в Makefile (-2 балла)
+OK: Найдены обязательные флаги -Werror -Wpedantic -Wall
+OK: make clean выполнен успешно
+OK: Проект собирается
+OK: Оператор << реализован
+OK: Операторы сравнения реализованы
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+ПРЕДУПРЕЖДЕНИЕ: Проблемы со стилем кода (-1 баллов)
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения cppcheck (-2 балла)
+Детали cppcheck:
+Checking Autobots.cpp ...
+1/9 files checked 9% done
+Checking Bbee.cpp ...
+2/9 files checked 17% done
+Checking Deceptikon.cpp ...
+3/9 files checked 27% done
+Checking Gun.cpp ...
+4/9 files checked 31% done
+Checking Hp.cpp ...
+5/9 files checked 35% done
+Checking Transformer.cpp ...
+6/9 files checked 54% done
+Checking main.cpp ...
+7/9 files checked 57% done
+Checking opers.cpp ...
+8/9 files checked 71% done
+Checking tests.cpp ...
+9/9 files checked 100% done
+Hp.hpp:10:5: style: Class 'Hp' has a constr
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Найдены исполняемые файлы: ['mikmik', 'testik']
+OK: Утечки памяти не обнаружены в mikmik
+OK: Утечки памяти не обнаружены в testik
+
+=== ИТОГОВЫЙ БАЛЛ: 81/100 ===

@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  homework-checker:
+    build: .
+    container_name: cpp-homework-checker
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - TERM=xterm-256color
+    stdin_open: true
+    tty: true
+    command: ["python3", "check_homework.py"]

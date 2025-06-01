@@ -1,0 +1,12 @@
+=== ОТЧЕТ ПО ПРОВЕРКЕ СТУДЕНТА: student1 ===
+Начальный балл: 100
+
+Папка с заданиями: student1/HomeAssignmets
+
+--- Проверка Assignment3 ---
+Путь: student1/HomeAssignmets/Assignment3
+
+--- Проверка Assignment4 ---
+Путь: student1/HomeAssignmets/Assignment4
+
+=== ИТОГОВЫЙ БАЛЛ: 62/100 ===

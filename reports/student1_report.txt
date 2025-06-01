@@ -1,0 +1,314 @@
+=== ОТЧЕТ ПО ПРОВЕРКЕ СТУДЕНТА: student1 ===
+Начальный балл: 100
+
+Папка с заданиями: /app/student1/HomeAssignmets
+
+--- Проверка Assignment3 ---
+Путь: /app/student1/HomeAssignmets/Assignment3
+OK: Makefile присутствует
+OK: make clean выполнен успешно
+OK: Проект собирается
+Найдено файлов исходного кода: 13
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+ПРЕДУПРЕЖДЕНИЕ: Проблемы со стилем кода (-5 баллов)
+Детали проблем со стилем:
+
+Файл ./Class_Decepticon.h имеет проблемы форматирования (структура, порядок):
+--- ./Class_Decepticon.h	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.MFnoLYkxoM	2025-06-01 14:42:47.443123214 +0000
+@@ -1,6 +1,6 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This is the header file for the inherited class Decepticon, it declares the constructor, 
++    This is the header file for the inherited class Decepticon, it declares the constructor,
+     destructor, and main functions of this class.
+ */
+ 
+
+Файл ./Class_Ability.h имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Ability.h	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.yVG0Hk4a7q	2025-06-01 14:42:47.455121252 +0000
+@@ -9,7 +9,8 @@
+ #include "Class_Transformer.h"
+ 
+ // Declare class Ability
+-class Ability {
++class Ability
++{
+ public:
+
+Файл ./Class_Weapon.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Weapon.cpp	2025-05-29 19:15:54.706345321 +0000
++++ /tmp/tmp.lbOgsuh5ks	2025-06-01 14:42:47.467119290 +0000
+@@ -9,16 +9,24 @@
+ Weapon::Weapon(unsigned int patron, bool hav) : _patron(patron), _is_have(hav) {}
+ 
+ // Setters and getters for Weapon
+-void Weapon::setPatron(unsigned int patron) {
++void Weapon::setPatron(unsigned int patron)
++{
+     _patron = patron;
+
+Файл ./Class_Autobot.h имеет проблемы форматирования (структура, порядок):
+--- ./Class_Autobot.h	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.JZCeE4IaK4	2025-06-01 14:42:47.477117655 +0000
+@@ -1,6 +1,6 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This is the header file for the inherited class Autobot, it declares the constructor, 
++    This is the header file for the inherited class Autobot, it declares the constructor,
+     destructor, and main functions of this class.
+ */
+ 
+
+Файл ./Class_Transformer.h имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Transformer.h	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.JCneOZCPlI	2025-06-01 14:42:47.489115693 +0000
+@@ -1,6 +1,6 @@
+-/* 
++/*
+     Egor Shastin st129457@student.spbu.ru
+-    This header file contains the declaration of the Transformer and Weapon classes 
++    This header file contains the declaration of the Transformer and Weapon classes
+     and the anum class Direction.
+ */
+
+Файл ./main.cpp имеет проблемы форматирования (структура, порядок):
+--- ./main.cpp	2025-05-29 19:15:54.706345321 +0000
++++ /tmp/tmp.t0yLnJv6Rj	2025-06-01 14:42:47.501113731 +0000
+@@ -1,6 +1,6 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This code allows you to interact with all folders, unites them. 
++    This code allows you to interact with all folders, unites them.
+     Here you can try all the functions of the robots and set the type of robot (Autobot/Decepticon/Dinobot)
+ */
+ 
+
+Файл ./Class_Dinobot.h имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Dinobot.h	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.y87EvCbHOM	2025-06-01 14:42:47.513111770 +0000
+@@ -10,23 +10,24 @@
+ #include "Class_Transformer.h"
+ 
+ // Declare class Dinobot
+-class Dinobot : public Transformer {
++class Dinobot : public Transformer
++{
+ public:
+
+Файл ./Class_Weapon.h имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Weapon.h	2025-05-29 19:15:54.706345321 +0000
++++ /tmp/tmp.zzbS6tJw1M	2025-06-01 14:42:47.524109971 +0000
+@@ -7,21 +7,22 @@
+ #define CLASS_WEAPON_H
+ 
+ // // Declare class Weapon for composition
+-class Weapon {
++class Weapon
++{
+ public:
+
+Файл ./test_transformer.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./test_transformer.cpp	2025-05-29 19:15:54.706345321 +0000
++++ /tmp/tmp.bTezNSMGyf	2025-06-01 14:42:47.537107846 +0000
+@@ -12,7 +12,8 @@
+ #include "Class_Weapon.h"
+ 
+ // Tests for class Transformer
+-TEST(TransformerTest, InitialValues) {
++TEST(TransformerTest, InitialValues)
++{
+     Transformer transformer;
+
+Файл ./Class_Autobot.cpp имеет проблемы форматирования (структура, порядок):
+--- ./Class_Autobot.cpp	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.SGTkAlFMIL	2025-06-01 14:42:47.548106048 +0000
+@@ -1,6 +1,6 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This code contains the constructor and destructor for the inherited Autobot class, 
++    This code contains the constructor and destructor for the inherited Autobot class,
+     as well as the function transform.
+ */
+ 
+
+Файл ./Class_Dinobot.cpp имеет проблемы форматирования (структура, порядок):
+--- ./Class_Dinobot.cpp	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.gpYB2SH7R5	2025-06-01 14:42:47.559104249 +0000
+@@ -1,24 +1,28 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This code contains the constructor and destructor for the inherited Dinobot class, 
++    This code contains the constructor and destructor for the inherited Dinobot class,
+     as well as the function transform.
+ */
+ 
+
+Файл ./Class_Decepticon.cpp имеет проблемы форматирования (структура, порядок):
+--- ./Class_Decepticon.cpp	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.1wO0CMjaXn	2025-06-01 14:42:47.571102287 +0000
+@@ -1,6 +1,6 @@
+ /*
+     Egor Shastin st129457@student.spbu.ru
+-    This code contains the constructor and destructor for the inherited Decepticon class, 
++    This code contains the constructor and destructor for the inherited Decepticon class,
+     as well as the function transform.
+ */
+ 
+
+Файл ./Class_Transformer.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Transformer.cpp	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.WvZ9SK7V7V	2025-06-01 14:42:47.583100325 +0000
+@@ -1,6 +1,6 @@
+-/* 
++/*
+     Egor Shastin st129457@student.spbu.ru
+-    This file contains the code for the main functions of the Transformer class, 
++    This file contains the code for the main functions of the Transformer class,
+     its constructor and destructor.
+ */
+
+Файл ./Class_Ability.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Class_Ability.cpp	2025-05-29 19:15:54.705345261 +0000
++++ /tmp/tmp.tKo3UkVsB9	2025-06-01 14:42:47.596098200 +0000
+@@ -11,8 +11,10 @@
+ 
+ Ability::Ability(bool hav, unsigned int power) : _is_have(hav), _power(power) {}
+ 
+-void Ability::activate(Transformer& transformer) {
+-    if (transformer.getFuel() < _power) {
++void Ability::activate(Transformer& transformer)
++{
+
+OK: Статический анализ cppcheck пройден
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Детали clang-tidy:
+Файл ./Class_Weapon.cpp:
+/app/student1/HomeAssignmets/Assignment3/Class_Weapon.cpp:19:16: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment3/Class_Weapon.h:18:5: warning: function 'getPatron' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Weapon.h:23:5: warning: function 'getIsHave' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./main.cpp:
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:13:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:23:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:28:5: warning: function 'getFirepowerAutobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:13:7: warning: class 'Decepticon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:23:5: warning: function 'getBloodiness' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:28:5: warning: function 'getFirepowerDecepticon' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:13:7: warning: class 'Dinobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:23:5: warning: function 'getAlive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:28:5: warning: function 'getFirepowerDinobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:16:7: warning: class 'Transformer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+
+Файл ./test_transformer.cpp:
+/app/student1/HomeAssignmets/Assignment3/Class_Ability.h:22:5: warning: function 'getIsHave' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Ability.h:27:5: warning: function 'getPower' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:13:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:23:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:28:5: warning: function 'getFirepowerAutobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:13:7: warning: class 'Decepticon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:23:5: warning: function 'getBloodiness' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Decepticon.h:28:5: warning: function 'getFirepowerDecepticon' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:13:7: warning: class 'Dinobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:23:5: warning: function 'getAlive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./Class_Autobot.cpp:
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.cpp:41:52: warning: implicit conversion 'unsigned int' -> bool [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:13:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:23:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:28:5: warning: function 'getFirepowerAutobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:31:18: warning: use default member initializer for '_firepower_autobot' [modernize-use-default-member-init]
+/app/student1/HomeAssignmets/Assignment3/Class_Autobot.h:32:10: warning: use default member initializer for '_helping' [modernize-use-default-member-init]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:16:7: warning: class 'Transformer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:43:18: warning: member variable '_ammo' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:44:18: warning: member variable '_level' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:45:18: warning: member variable '_strength' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+
+Файл ./Class_Dinobot.cpp:
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.cpp:40:52: warning: implicit conversion 'unsigned int' -> bool [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:13:7: warning: class 'Dinobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:23:5: warning: function 'getAlive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:28:5: warning: function 'getFirepowerDinobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:31:18: warning: use default member initializer for '_firepower_dinobot' [modernize-use-default-member-init]
+/app/student1/HomeAssignmets/Assignment3/Class_Dinobot.h:32:10: warning: use default member initializer for '_still_alive' [modernize-use-default-member-init]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:16:7: warning: class 'Transformer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:43:18: warning: member variable '_ammo' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:44:18: warning: member variable '_level' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment3/Class_Transformer.h:45:18: warning: member variable '_strength' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+
+Найдены исполняемые файлы: ./main
+OK: Утечки памяти не обнаружены в main
+
+--- Проверка Assignment4 ---
+Путь: /app/student1/HomeAssignmets/Assignment4
+OK: Makefile присутствует
+OK: Найдены обязательные флаги -Werror -Wpedantic -Wall
+OK: make clean выполнен успешно
+OK: Проект собирается
+OK: Оператор << реализован
+OK: Операторы сравнения реализованы
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+OK: Стиль кода соответствует astyle (-A1 -s4)
+OK: Статический анализ cppcheck пройден
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Детали clang-tidy:
+Файл ./main.cpp:
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:19:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:31:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:36:5: warning: function 'getFirepowerAutobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:39:51: warning: parameter name 'os' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:40:51: warning: parameter name 'is' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:19:7: warning: class 'Decepticon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:31:5: warning: function 'getBloodiness' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:36:5: warning: function 'getFirepowerDecepticon' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:39:51: warning: parameter name 'os' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:40:51: warning: parameter name 'is' is too short, expected at least 3 characters [readability-identifier-length]
+
+Файл ./Weapon.cpp:
+/app/student1/HomeAssignmets/Assignment4/Weapon.cpp:24:16: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment4/Weapon.h:19:5: warning: function 'getPatron' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Weapon.h:24:5: warning: function 'getIsHave' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./test_transformer.cpp:
+/app/student1/HomeAssignmets/Assignment4/Ability.h:23:5: warning: function 'getIsHave' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Ability.h:28:5: warning: function 'getPower' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:19:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:31:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:36:5: warning: function 'getFirepowerAutobot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:39:51: warning: parameter name 'os' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:40:51: warning: parameter name 'is' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:19:7: warning: class 'Decepticon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:31:5: warning: function 'getBloodiness' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Decepticon.h:36:5: warning: function 'getFirepowerDecepticon' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./Autobot.cpp:
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:13:22: warning: initializer for base class 'Transformer' is redundant [readability-redundant-member-init]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:19:7: warning: initializer for base class 'Transformer' is redundant [readability-redundant-member-init]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:61:40: warning: parameter name 'os' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:67:40: warning: parameter name 'is' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:111:33: warning: implicit conversion bool -> 'unsigned int' [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:116:33: warning: implicit conversion bool -> 'unsigned int' [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment4/Autobot.cpp:121:34: warning: implicit conversion bool -> 'unsigned int' [readability-implicit-bool-conversion]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:19:7: warning: class 'Autobot' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:23:5: warning: function 'Autobot::Autobot' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+/app/student1/HomeAssignmets/Assignment4/Autobot.h:31:5: warning: function 'getHelping' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./Ability.cpp:
+/app/student1/HomeAssignmets/Assignment4/Ability.cpp:14:15: warning: method 'activate' can be made const [readability-make-member-function-const]
+/app/student1/HomeAssignmets/Assignment4/Ability.cpp:23:5: warning: redundant return statement at the end of a function with a void return type [readability-redundant-control-flow]
+/app/student1/HomeAssignmets/Assignment4/Ability.h:23:5: warning: function 'getIsHave' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Ability.h:28:5: warning: function 'getPower' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:16:7: warning: class 'Transformer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:45:51: warning: parameter name 'os' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:46:51: warning: parameter name 'is' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:54:18: warning: member variable '_ammo' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:55:18: warning: member variable '_level' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+/app/student1/HomeAssignmets/Assignment4/Transformer.h:56:18: warning: member variable '_strength' has protected visibility [cppcoreguidelines-non-private-member-variables-in-classes]
+
+Найдены исполняемые файлы: ./main
+OK: Утечки памяти не обнаружены в main
+
+=== ИТОГОВЫЙ БАЛЛ: 89/100 ===

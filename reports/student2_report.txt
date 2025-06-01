@@ -1,0 +1,455 @@
+=== ОТЧЕТ ПО ПРОВЕРКЕ СТУДЕНТА: student2 ===
+Начальный балл: 100
+
+Папка с заданиями: /app/student2/HomeAssignments
+
+--- Проверка Assignment3 ---
+Путь: /app/student2/HomeAssignments/Assignment3
+OK: Makefile присутствует
+OK: make clean выполнен успешно
+OK: Проект собирается
+Найдено файлов исходного кода: 13
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+ПРЕДУПРЕЖДЕНИЕ: Проблемы со стилем кода (-5 баллов)
+Детали проблем со стилем:
+
+Файл ./Deceptikon.hpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Deceptikon.hpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.GoTd1BGu3K	2025-06-01 14:43:22.140448592 +0000
+@@ -5,24 +5,25 @@
+ #include <string>
+ #include "Transformer.hpp"
+ 
+-class Deceptikon: public Transformer {
+-	public:
+-	    Deceptikon(std::string label, int armor, int ammo, int courage, int hp, int rleg, int lleg);
+-	    
+
+Файл ./Transformer.hpp имеет проблемы форматирования (структура, порядок):
+--- ./Transformer.hpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.T5pMxS6lPh	2025-06-01 14:43:22.152446630 +0000
+@@ -6,37 +6,38 @@
+ #include "Hp.hpp"
+ #include "Gun.hpp"
+ 
+-class Transformer {
+-	public:
+-	    Transformer(std::string label, int armor, int ammo, int courage, int hp);
+-	    void setAmmo(int ammo);
+
+Файл ./Gun.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Gun.cpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.XQA9CMAkS7	2025-06-01 14:43:22.164444667 +0000
+@@ -2,14 +2,18 @@
+ 
+ #include "Gun.hpp"
+ 
+-Gun::Gun(std::string name) {
++Gun::Gun(std::string name)
++{
+     gun_name_ = name;
+
+Файл ./Deceptikon.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Deceptikon.cpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.poXES4qkx7	2025-06-01 14:43:22.176442705 +0000
+@@ -4,29 +4,37 @@
+ 
+ Deceptikon::Deceptikon(std::string label, int armor, int ammo, int courage, int hp, int rleg,
+                        int lleg)
+-    : Transformer(label, armor, ammo, courage, hp), rleg_(rleg), lleg_(lleg) {
++    : Transformer(label, armor, ammo, courage, hp), rleg_(rleg), lleg_(lleg)
++{
+ }
+
+Файл ./main.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./main.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.w5sFG7Ewp9	2025-06-01 14:43:22.187440906 +0000
+@@ -8,6 +8,7 @@
+ #include "Deceptikon.hpp"
+ #include "Transformer.hpp"
+ 
+-int main() {
++int main()
++{
+     return 1;
+
+Файл ./Gun.hpp имеет проблемы форматирования (структура, порядок):
+--- ./Gun.hpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.e3estAg1kP	2025-06-01 14:43:22.198439106 +0000
+@@ -3,14 +3,15 @@
+ #ifndef GUN
+ #define GUN
+ #include <string>
+-class Gun {
+-	public:
+-	    Gun(std::string name);
+-	    void setGun(std::string gun);
+
+Файл ./tests.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./tests.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.tcy0bMLSWf	2025-06-01 14:43:22.210437144 +0000
+@@ -9,7 +9,8 @@
+ #include "Deceptikon.hpp"
+ #include "Transformer.hpp"
+ 
+-TEST(TransformerTest, Transformer) {
++TEST(TransformerTest, Transformer)
++{
+     Transformer boop("BumbleBee", 10, 20, 30, 40);
+
+Файл ./Hp.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Hp.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.OWlJDMOg8w	2025-06-01 14:43:22.222435181 +0000
+@@ -3,16 +3,21 @@
+ #include "Hp.hpp"
+ 
+ #include <string>
+-Hp::Hp() {
++Hp::Hp()
++{
+ }
+
+Файл ./Hp.hpp имеет проблемы форматирования (структура, порядок):
+--- ./Hp.hpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.NUx6Tbfqii	2025-06-01 14:43:22.232433546 +0000
+@@ -3,16 +3,17 @@
+ #ifndef HP
+ #define HP
+ 
+-class Hp {
+-    public:
+-    	Hp();
+-        Hp(int hp);
+
+Файл ./Transformer.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Transformer.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.NXXyZsDBof	2025-06-01 14:43:22.243431746 +0000
+@@ -2,7 +2,8 @@
+ 
+ #include "Transformer.hpp"
+ 
+-Transformer::Transformer(std::string label, int armor, int ammo, int courage, int hp) {
++Transformer::Transformer(std::string label, int armor, int ammo, int courage, int hp)
++{
+     label_ = label;
+
+Файл ./Autobots.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Autobots.cpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.eX1MI2Ubtt	2025-06-01 14:43:22.255429784 +0000
+@@ -3,28 +3,36 @@
+ #include "Autobots.hpp"
+ 
+ Autobots::Autobots(std::string label, int armor, int ammo, int courage, int hp, int rarm, int larm)
+-    : Transformer(label, armor, ammo, courage, hp), rarm_(rarm), larm_(larm) {
++    : Transformer(label, armor, ammo, courage, hp), rarm_(rarm), larm_(larm)
++{
+ }
+
+Файл ./Bbee.hpp имеет проблемы форматирования (структура, порядок):
+--- ./Bbee.hpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.VbdzEzGZnR	2025-06-01 14:43:22.265428149 +0000
+@@ -4,23 +4,24 @@
+ #define BBEE
+ #include "Transformer.hpp"
+ 
+-class Bbee : public Transformer {
+-    public:
+-        Bbee(std::string label, int armor, int ammo, int courage, int hp, int rear, int lear);
+-        int getRear();
+
+Файл ./Autobots.hpp имеет проблемы форматирования (структура, порядок):
+--- ./Autobots.hpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.mwMpShbD0f	2025-06-01 14:43:22.278426022 +0000
+@@ -4,23 +4,24 @@
+ #define AUTOBOTS
+ #include "Transformer.hpp"
+ 
+-class Autobots : public Transformer {
+-    public:
+-        Autobots(std::string label, int armor, int ammo, int courage, int hp, int rarm, int larm);
+-        int getRarm();
+
+Файл ./Bbee.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Bbee.cpp	2025-05-29 19:16:22.849987888 +0000
++++ /tmp/tmp.1tWBKTDnFq	2025-06-01 14:43:22.289424223 +0000
+@@ -3,28 +3,36 @@
+ #include "Bbee.hpp"
+ 
+ Bbee::Bbee(std::string label, int armor, int ammo, int courage, int hp, int rear, int lear)
+-    : Transformer(label, armor, ammo, courage, hp), rear_(rear), lear_(lear) {
++    : Transformer(label, armor, ammo, courage, hp), rear_(rear), lear_(lear)
++{
+ }
+
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения cppcheck (-2 балла)
+Детали cppcheck:\nHp.hpp:9:9: style: Class 'Hp' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+Gun.hpp:8:6: style: Class 'Gun' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+Autobots.cpp:5:32: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Bbee.cpp:5:24: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Deceptikon.cpp:5:36: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Gun.cpp:6:5: performance: Variable 'gun_name_' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+Gun.cpp:5:22: performance: Function parameter 'name' should be passed by const reference. [passedByValue]
+Gun.cpp:8:30: performance: Function parameter 'gun' should be passed by const reference. [passedByValue]
+Transformer.cpp:5:14: warning: Member variable 'Transformer::weapon_' is not initialized in the constructor. [uninitMemberVar]
+Transformer.cpp:6:5: performance: Variable 'label_' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Детали clang-tidy:
+Файл ./Gun.cpp:
+/app/student2/HomeAssignments/Assignment3/Gun.cpp:6:5: warning: 'gun_name_' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+/app/student2/HomeAssignments/Assignment3/Gun.cpp:6:17: warning: parameter 'name' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment3/Gun.cpp:9:17: warning: parameter 'gun' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment3/Gun.cpp:14:6: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment3/Gun.hpp:6:7: warning: class 'Gun' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Gun.hpp:13:18: warning: invalid case style for private member 'gun_name_' [readability-identifier-naming]
+
+Файл ./Deceptikon.cpp:
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:5:81: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:7:19: warning: parameter 'label' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:10:17: warning: method 'getLleg' can be made const [readability-make-member-function-const]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:17:17: warning: method 'getRleg' can be made const [readability-make-member-function-const]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:24:18: warning: method 'transform' can be made static [readability-convert-member-functions-to-static]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:27:18: warning: method 'mikmik' can be made static [readability-convert-member-functions-to-static]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.cpp:31:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:8:7: warning: class 'Deceptikon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:10:74: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:24:10: warning: invalid case style for private member 'rleg_' [readability-identifier-naming]
+
+Файл ./main.cpp:
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:7:7: warning: class 'Autobots' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:9:75: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:22:13: warning: invalid case style for private member 'rarm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:23:13: warning: invalid case style for private member 'larm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:7:7: warning: class 'Bbee' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:9:71: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:22:13: warning: invalid case style for private member 'rear_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:23:13: warning: invalid case style for private member 'lear_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:8:7: warning: class 'Deceptikon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:10:74: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+
+Файл ./tests.cpp:
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:7:7: warning: class 'Autobots' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:9:75: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:22:13: warning: invalid case style for private member 'rarm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Autobots.hpp:23:13: warning: invalid case style for private member 'larm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:7:7: warning: class 'Bbee' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:9:71: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:22:13: warning: invalid case style for private member 'rear_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Bbee.hpp:23:13: warning: invalid case style for private member 'lear_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:8:7: warning: class 'Deceptikon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Deceptikon.hpp:10:74: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+
+Файл ./Hp.cpp:
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:6:1: warning: constructor does not initialize these fields: hps_ [cppcoreguidelines-pro-type-member-init]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:6:5: warning: use '= default' to define a trivial default constructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:8:12: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:9:5: warning: 'hps_' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:11:9: warning: method 'getHp' can be made const [readability-make-member-function-const]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:14:20: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Hp.cpp:17:5: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment3/Hp.hpp:6:7: warning: class 'Hp' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment3/Hp.hpp:9:16: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment3/Hp.hpp:11:24: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+
+Найдены исполняемые файлы: ./mikmik
+./testik
+OK: Утечки памяти не обнаружены в mikmik
+OK: Утечки памяти не обнаружены в testik
+
+--- Проверка Assignment4 ---
+Путь: /app/student2/HomeAssignments/Assignment4
+OK: Makefile присутствует
+OK: Найдены обязательные флаги -Werror -Wpedantic -Wall
+OK: make clean выполнен успешно
+OK: Проект собирается
+OK: Оператор << реализован
+OK: Операторы сравнения реализованы
+OK: Найдено 1 файлов тестов
+OK: Тесты проходят (make test)
+ПРЕДУПРЕЖДЕНИЕ: Проблемы со стилем кода (-1 баллов)
+Детали проблем со стилем:
+
+Файл ./Gun.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Gun.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.fnxWuuH1E7	2025-06-01 14:43:35.051336545 +0000
+@@ -2,14 +2,18 @@
+ 
+ #include "Gun.hpp"
+ 
+-Gun::Gun(std::string name) {
++Gun::Gun(std::string name)
++{
+     gun_name_ = name;
+
+Файл ./Deceptikon.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Deceptikon.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.MCRxjvUwEl	2025-06-01 14:43:35.062334746 +0000
+@@ -4,29 +4,37 @@
+ 
+ Deceptikon::Deceptikon(std::string label, int armor, int ammo, int courage, int hp, int rleg,
+                        int lleg)
+-    : Transformer(label, armor, ammo, courage, hp), rleg_(rleg), lleg_(lleg) {
++    : Transformer(label, armor, ammo, courage, hp), rleg_(rleg), lleg_(lleg)
++{
+ }
+
+Файл ./main.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./main.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.utykSOMIDn	2025-06-01 14:43:35.073332947 +0000
+@@ -9,6 +9,7 @@
+ #include "Transformer.hpp"
+ #include "opers.hpp"
+ 
+-int main() {
++int main()
++{
+     return 1;
+
+Файл ./tests.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./tests.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.DEgn9Wi4pX	2025-06-01 14:43:35.093329675 +0000
+@@ -11,7 +11,8 @@
+ #include "Transformer.hpp"
+ #include "opers.hpp"
+ 
+-TEST(TransformerTest, Transformer) {
++TEST(TransformerTest, Transformer)
++{
+     Transformer boop("BumbleBee", 10, 20, 30, 40);
+
+Файл ./Hp.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Hp.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.IRT0vwQZTA	2025-06-01 14:43:35.104327876 +0000
+@@ -3,16 +3,21 @@
+ #include "Hp.hpp"
+ 
+ #include <string>
+-Hp::Hp() {
++Hp::Hp()
++{
+ }
+
+Файл ./Transformer.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Transformer.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.UXCtsnKtHY	2025-06-01 14:43:35.122324932 +0000
+@@ -2,7 +2,8 @@
+ 
+ #include "Transformer.hpp"
+ 
+-Transformer::Transformer(std::string label, int armor, int ammo, int courage, int hp) {
++Transformer::Transformer(std::string label, int armor, int ammo, int courage, int hp)
++{
+     label_ = label;
+
+Файл ./opers.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./opers.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.modbMBLhjm	2025-06-01 14:43:35.134322969 +0000
+@@ -2,41 +2,52 @@
+ 
+ #include "opers.hpp"
+ 
+-std::ostream &operator<<(std::ostream &os, const Transformer &tran) {
++std::ostream &operator<<(std::ostream &os, const Transformer &tran)
++{
+     os << tran.getLabel();
+
+Файл ./Autobots.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Autobots.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.Qcmllcg4bf	2025-06-01 14:43:35.146321006 +0000
+@@ -3,28 +3,36 @@
+ #include "Autobots.hpp"
+ 
+ Autobots::Autobots(std::string label, int armor, int ammo, int courage, int hp, int rarm, int larm)
+-    : Transformer(label, armor, ammo, courage, hp), rarm_(rarm), larm_(larm) {
++    : Transformer(label, armor, ammo, courage, hp), rarm_(rarm), larm_(larm)
++{
+ }
+
+Файл ./Bbee.cpp имеет незначительные проблемы форматирования (пробелы, отступы, комментарии):
+--- ./Bbee.cpp	2025-05-29 19:16:22.850987945 +0000
++++ /tmp/tmp.4Jz50j4eum	2025-06-01 14:43:35.174316426 +0000
+@@ -3,28 +3,36 @@
+ #include "Bbee.hpp"
+ 
+ Bbee::Bbee(std::string label, int armor, int ammo, int courage, int hp, int rear, int lear)
+-    : Transformer(label, armor, ammo, courage, hp), rear_(rear), lear_(lear) {
++    : Transformer(label, armor, ammo, courage, hp), rear_(rear), lear_(lear)
++{
+ }
+
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения cppcheck (-2 балла)
+Детали cppcheck:\nHp.hpp:10:5: style: Class 'Hp' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+Gun.hpp:9:5: style: Class 'Gun' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+Transformer.hpp:14:5: style: Class 'Transformer' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+Autobots.cpp:5:32: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Bbee.cpp:5:24: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Deceptikon.cpp:5:36: performance: Function parameter 'label' should be passed by const reference. [passedByValue]
+Gun.cpp:6:5: performance: Variable 'gun_name_' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+Gun.cpp:5:22: performance: Function parameter 'name' should be passed by const reference. [passedByValue]
+Gun.cpp:8:30: performance: Function parameter 'gun' should be passed by const reference. [passedByValue]
+Transformer.cpp:14:14: warning: Member variable 'Transformer::armor_' is not initialized in the constructor. [uninitMemberVar]
+ПРЕДУПРЕЖДЕНИЕ: Предупреждения clang-tidy (-3 баллов)
+Детали clang-tidy:
+Файл ./Gun.cpp:
+/app/student2/HomeAssignments/Assignment4/Gun.cpp:6:5: warning: 'gun_name_' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+/app/student2/HomeAssignments/Assignment4/Gun.cpp:6:17: warning: parameter 'name' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment4/Gun.cpp:9:17: warning: parameter 'gun' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment4/Gun.cpp:14:6: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment4/Gun.hpp:6:7: warning: class 'Gun' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Gun.hpp:11:5: warning: function 'getGun' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Gun.hpp:14:17: warning: invalid case style for private member 'gun_name_' [readability-identifier-naming]
+
+Файл ./Deceptikon.cpp:
+/app/student2/HomeAssignments/Assignment4/Deceptikon.cpp:5:81: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.cpp:7:19: warning: parameter 'label' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.cpp:24:18: warning: method 'transform' can be made static [readability-convert-member-functions-to-static]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.cpp:27:18: warning: method 'mikmik' can be made static [readability-convert-member-functions-to-static]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.cpp:31:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.hpp:8:7: warning: class 'Deceptikon' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.hpp:11:73: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.hpp:13:5: warning: function 'getLleg' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.hpp:16:5: warning: function 'getRleg' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Deceptikon.hpp:25:9: warning: invalid case style for private member 'rleg_' [readability-identifier-naming]
+
+Файл ./main.cpp:
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:7:7: warning: class 'Autobots' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:10:71: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:11:5: warning: function 'getRarm' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:14:5: warning: function 'getLarm' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:23:9: warning: invalid case style for private member 'rarm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:24:9: warning: invalid case style for private member 'larm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:7:7: warning: class 'Bbee' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:10:67: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:11:5: warning: function 'getRear' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:14:5: warning: function 'getLear' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./tests.cpp:
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:7:7: warning: class 'Autobots' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:10:71: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:11:5: warning: function 'getRarm' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:14:5: warning: function 'getLarm' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:23:9: warning: invalid case style for private member 'rarm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment4/Autobots.hpp:24:9: warning: invalid case style for private member 'larm_' [readability-identifier-naming]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:7:7: warning: class 'Bbee' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:10:67: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:11:5: warning: function 'getRear' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Bbee.hpp:14:5: warning: function 'getLear' should be marked [[nodiscard]] [modernize-use-nodiscard]
+
+Файл ./Hp.cpp:
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:6:1: warning: constructor does not initialize these fields: hps_ [cppcoreguidelines-pro-type-member-init]
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:6:5: warning: use '= default' to define a trivial default constructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:8:12: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:9:5: warning: 'hps_' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:14:20: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Hp.cpp:17:5: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/app/student2/HomeAssignments/Assignment4/Hp.hpp:6:7: warning: class 'Hp' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/app/student2/HomeAssignments/Assignment4/Hp.hpp:10:12: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+/app/student2/HomeAssignments/Assignment4/Hp.hpp:11:5: warning: function 'getHp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+/app/student2/HomeAssignments/Assignment4/Hp.hpp:12:20: warning: parameter name 'hp' is too short, expected at least 3 characters [readability-identifier-length]
+
+Найдены исполняемые файлы: ./mikmik
+./testik
+OK: Утечки памяти не обнаружены в mikmik
+OK: Утечки памяти не обнаружены в testik
+
+=== ИТОГОВЫЙ БАЛЛ: 84/100 ===
